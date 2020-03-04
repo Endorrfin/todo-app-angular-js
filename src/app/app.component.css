@@ -1,0 +1,24 @@
+td {
+  background: #b9b8b8;
+  padding: 5px;
+} 
+
+th {
+  background: #002551;
+  color: #f8f8f8;
+  padding: 5px;
+}
+
+input {
+  height: 40px;
+  width: 270px;
+  border-radius: 7px;
+}
+
+button {
+  height: 40px;
+  width: 90px;
+  background: #7c7777;
+  color: white;
+  border-radius: 8px;
+}
