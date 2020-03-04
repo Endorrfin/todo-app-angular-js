@@ -5,6 +5,34 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'todo-app-angular-js';
+  title = 'TODO App';
+  todos = [
+    { 
+      label: 'create new repositories TODO App on gitHub',
+      done: true,
+      priority: 1
+    },
+    { 
+      label: 'create new branch',
+      done: true,
+      priority: 3
+    },
+    { 
+      label: 'create markup for to-do list in html',
+      done: false,
+      priority: 2
+    },
+    { 
+      label: 'create components',
+      done: false,
+      priority: 3
+    },
+    { 
+      label: 'create services',
+      done: false,
+      priority: 3
+    }
+  ];
 }
