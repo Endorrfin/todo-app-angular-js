@@ -1,4 +1,5 @@
 .wrapper-form {
+  width: 440px;
   border: 1px dashed #bcbcbc;
   padding: 10px;
   margin-bottom: 20px;
@@ -17,10 +18,11 @@
   padding: 10px;
   font-size: 16px;
   margin-bottom: 10px;
+  width: 400px;
 }
 
 .btn-add-task {
-  background: #2f3fa5;
+  background: #24b38c;
   color: #ffffff;
   text-align: center;
   font-size: 16px;
@@ -32,7 +34,7 @@
 
 
 td {
-  background: #b9b8b8;
+  background: #d8d8d8;
   padding: 5px;
 } 
 
@@ -43,15 +45,11 @@ th {
   padding: 5px;
 }
 
-input {
-  height: 40px;
-  width: 270px;
-  border-radius: 7px;
-}
 
 button {
   height: 30px;
-  background: #7c7777;
-  color: white;
+  background: #bdbaba;
+  color: #000000;
+  border: .5px solid #696767;
   border-radius: 8px;
 }
