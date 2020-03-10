@@ -1,0 +1,57 @@
+.wrapper-form {
+  border: 1px dashed #bcbcbc;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.label-text {
+  display: block;
+  padding: 5px;
+}
+
+.input-text {
+  margin: 0;
+  border-radius: 0;
+  height: 20px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.btn-add-task {
+  background: #2f3fa5;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-add-task:hover {
+  background: #089b73;
+}
+
+
+td {
+  background: #b9b8b8;
+  padding: 5px;
+} 
+
+th {
+  background: #002551;
+  height: 25px;
+  color: #f8f8f8;
+  padding: 5px;
+}
+
+input {
+  height: 40px;
+  width: 270px;
+  border-radius: 7px;
+}
+
+button {
+  height: 30px;
+  background: #7c7777;
+  color: white;
+  border-radius: 8px;
+}
