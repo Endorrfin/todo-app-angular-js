@@ -58,13 +58,15 @@ export class TodoComponent implements OnInit {
 
   addTodo(form) {
     const newTask = {
-      id: String(this.todos.length + 1),
+      // id: String(this.todos.length + 1),
+      id: String(this.todos.length + Date.now()),
       title: this.todo.title,
       text: this.todo.text,
       complete: false
     };
 
-    this.todos.unshift(newTask);
+
+    this.todos = [newTask, ...this.todos];
     form.reset();
   }
 
