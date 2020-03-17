@@ -1,0 +1,20 @@
+
+
+<!--    <div class="todo-item" [class.completed]="todo.completed">-->
+
+<div class="todo-item" [class.completed]="todo.completed">
+  <button class="checkbox icon" (click)="toggle()">
+    <!--        <i *ngIf="!todo.completed" class="material-icons">check_box_outline_blank</i>-->
+    <!--        <i *ngIf="todo.completed" class="material-icons">check_box</i>-->
+    <!--        <i class="material-icons" [innerText]="todo.completed ? 'check_box' : 'check_box_outline_blank'"></i>-->
+    <!--        <i class="material-icons" [textContent]="todo.completed ? 'check_box' : 'check_box_outline_blank'"></i>-->
+    <i class="material-icons">{{ todo.completed ? 'check_box' : 'check_box_outline_blank' }}</i>
+  </button>
+  <span class="title">{{todo.title}}</span>
+
+  <div class="actions" (click)="onDelete()">
+    <button class="delete icon">
+      <i class="material-icons">delete</i>
+    </button>
+  </div>
+</div>
