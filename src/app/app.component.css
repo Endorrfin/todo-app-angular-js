@@ -1,9 +1,5 @@
 
 header {
-  background-color: slategray;
-}
-
-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +24,10 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+header {
+  background-color: snow;
 }
 
 
