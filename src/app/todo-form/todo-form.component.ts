@@ -14,10 +14,6 @@ export class TodoFormComponent implements OnInit {
     this.add.emit(this.title);
   }
 
-
-  create() {
-  }
-
   constructor() { }
 
   ngOnInit(): void {
