@@ -1,6 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
-
-import {TodoService} from '../shared/todo.service';
+import {Component, Output, EventEmitter, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'todo-form',
@@ -10,13 +8,15 @@ import {TodoService} from '../shared/todo.service';
 })
 export class TodoFormComponent implements OnInit {
   title: string = '';
-
-  constructor(private todoService: TodoService) {}
+  @Output() add = new EventEmitter();
 
   onSubmit() {
-    this.todoService.createTodo(this.title);
+    this.add.emit(this.title);
   }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
+
 }

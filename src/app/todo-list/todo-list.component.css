@@ -5,8 +5,10 @@
   border-radius: 5px;
   width: 100%;
   background-color: white;
+  color: #1151B3;
+  font-size: 14px;
 }
 
 todo-item:not(:first-child) {
-  border-top: 1px dashed rgba(0,0,0,.1);
+  border-top: 1px dashed rgba(179,179,96,.3);
 }

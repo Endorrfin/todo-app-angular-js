@@ -10,10 +10,9 @@ import { Todo } from '../shared/todo';
 export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   @Output() delete = new EventEmitter();
-  @Output() toggle = new EventEmitter()
 
-  onToggle() {
-    this.toggle.emit(this.todo);
+  toggle() {
+    this.todo.completed = !this.todo.completed;
   }
 
   onDelete() {
