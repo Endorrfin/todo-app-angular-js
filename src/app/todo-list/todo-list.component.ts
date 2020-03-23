@@ -1,6 +1,7 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit} from '@angular/core';
+
 import { Todo } from '../shared/todo';
-import { todos } from '../shared/data';
+import { TodoService } from '../shared/todo.service';
 
 @Component({
   selector: 'todo-list',
@@ -9,14 +10,22 @@ import { todos } from '../shared/data';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoListComponent implements OnInit {
-  @Input() todos: Todo[];
+  todos: Todo[];
+
+  constructor(public todoService: TodoService) {
+    this.todos = []; // инициализация свойства
+  }
+
+  ngOnInit() {
+    this.todos = this.todoService.getTodos();
+  }
 
   delete(todo: Todo) {
-    this.todos = this.todos.filter((task) => task.id !== todo.id);
+    this.todoService.deleteTodo(todo);
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggle(todo: Todo) {
+    this.todoService.toggleTodo(todo);
   }
+
 }

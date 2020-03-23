@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 
-import { Todo } from './shared/todo';
-import { todos } from './shared/data';
+// import { Todo } from './shared/todo';
+// import { todos } from './shared/data';
 
 
 
@@ -12,17 +12,7 @@ import { todos } from './shared/data';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  headTitle: string = 'ToDo List App Angular';
-  todos: Todo[] = todos;
-
-
-
-
-  create(title: string, id: string) {
-    const todo = new Todo(title, id);
-    id: String(this.todos.length + Date.now()),
-    this.todos = [todo, ...this.todos];
-  }
+  title: string = 'ToDo List Angular';
 }
 
 

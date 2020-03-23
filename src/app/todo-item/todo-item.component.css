@@ -7,17 +7,15 @@
 
 .todo-item .checkbox {
   margin-right: .25em;
-  opacity: .4;
 }
 
 .todo-item.completed .title {
   text-decoration: line-through;
-  font-style: italic;
 }
 
 .todo-item.completed .title,
 .todo-item.completed .material-icons {
-  color: slategrey;
+  color: lightgray;
 }
 
 .todo-item input {
@@ -31,5 +29,5 @@
 }
 
 .todo-item:hover .actions {
-  opacity: .3;
+  opacity: .5;
 }
