@@ -1,6 +1,8 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import { Todo } from '../shared/todo';
+import { TodoService } from '../shared/todo.service';
 import { todos } from '../shared/data';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'todo-list',
@@ -9,13 +11,15 @@ import { todos } from '../shared/data';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoListComponent implements OnInit {
+  // todos: Observable<Todo[]>;
   @Input() todos: Todo[];
 
   delete(todo: Todo) {
-    this.todos = this.todos.filter((task) => task.id !== todo.id);
+    // this.todos = this.todos.filter((task) => task.id !== todo.id);
+    this.todoService.deleteTodo(todo);
   }
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
   }

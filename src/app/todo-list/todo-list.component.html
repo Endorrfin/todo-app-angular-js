@@ -1,6 +1,5 @@
 
 
 <div class="todo-list" *ngIf="todos.length !== 0">
-  <todo-item *ngFor="let todo of todos; let idx = index" [todo]="todo" (delete)="delete($event)"></todo-item>
+  <todo-item *ngFor="let todo of todos;" [todo]="todo" (delete)="delete($event)"></todo-item>
 </div>
-

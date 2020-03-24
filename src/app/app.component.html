@@ -5,5 +5,5 @@
 
 <main>
   <todo-form (add)="create($event)"></todo-form>
-  <todo-list [todos]="todos"></todo-list>
+  <todo-list [todos]="todos$ | async"></todo-list>
 </main>
