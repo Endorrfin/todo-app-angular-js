@@ -8,15 +8,15 @@ import { Todo } from '../shared/todo';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoItemComponent implements OnInit {
-  @Input() todo: Todo;
+  @Input() task: Todo;
   @Output() delete = new EventEmitter();
 
   toggle() {
-    this.todo.completed = !this.todo.completed;
+    this.task.completed = !this.task.completed;
   }
 
   onDelete() {
-    this.delete.emit(this.todo);
+    this.delete.emit(this.task);
   }
 
   constructor() { }

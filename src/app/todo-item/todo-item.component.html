@@ -1,9 +1,9 @@
 
-<div class="todo-item" [class.completed]="todo.completed">
+<div class="todo-item" [class.completed]="task.completed">
   <button class="checkbox icon" (click)="toggle()">
-    <i class="material-icons">{{ todo.completed ? 'check_box' : 'check_box_outline_blank' }}</i>
+    <i class="material-icons">{{ task.completed ? 'check_box' : 'check_box_outline_blank' }}</i>
   </button>
-  <span class="title">{{todo.title}}</span>
+  <span class="title">{{task.title}}</span>
 
   <div class="actions" (click)="onDelete()">
     <button class="delete icon">
