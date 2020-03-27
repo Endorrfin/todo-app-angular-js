@@ -15,7 +15,6 @@ export class TodoListComponent implements OnInit {
   @Input() todos: Todo[];
 
   delete(todo: Todo) {
-    // this.todos = this.todos.filter((task) => task.id !== todo.id);
     this.todoService.deleteTodo(todo);
   }
 

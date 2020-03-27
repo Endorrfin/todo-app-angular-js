@@ -15,32 +15,28 @@ export class TodoService {
   newTask = this.taskSource$.asObservable();
 
   createTodo(title) {
-    const todo = {
+    const task = {
       title: title,
       id: String(Date.now()),
       completed: false
     }
 
-    this.todos = [todo, ...this.todos];
+    this.todos = [task, ...this.todos];
     this.taskSource$.next(this.todos);
     }
 
-
-  // deleteTodo(payload) {
-  //   this.http.delete<Todo[]>(this.heroesUrl + '/' + payload.id).subscribe();
-  //   this.list$.next(this.list$.getValue().filter(value => value.id !== payload.id));
-  // }
-
   deleteTodo(todo: Todo) {
-    // this.todos = this.todos.filter(task => task.id !== task.id)
-    // this.taskSource$.next(this.todos.filter(task => task.id !== todo.id)); // changed tasks
-    // this.todos = this.todos.filter((task) => task.id !== todo.id);
+    this.taskSource$.next(this.todos.filter(task => task.id !== todo.id));
+    // this.todos = this.todos.filter(task => todo.id !== task.id)
 
 
-    let index = this.todos.indexOf(todo);
-    if(index !== -1) {
-      this.todos.splice(index, 1);
-    }
+    // let index = this.todos.indexOf(todo);
+    // console.log(index);
+    // console.log(this.todos);
+    // console.log(todo);
+    // if(index !== -1) {
+    //   this.todos.splice(index, 1);
+    // }
   }
 
   toggleTodo(todo: Todo) {
