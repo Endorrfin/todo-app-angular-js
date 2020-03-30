@@ -18,18 +18,15 @@ export class TodoService {
       id: String(Date.now()),
       completed: false
     }
-    this.taskSource$.next([task, ...this.taskSource$.getValue()]); // данные получаю из потока
+    this.taskSource$.next([task, ...this.taskSource$.getValue()]);
   }
-
 
   deleteTodo(todo: Todo) {
     this.taskSource$.next(this.taskSource$.getValue().filter(task => task.id !== todo.id));
-    console.log(this.taskSource$.getValue());
   }
 
-
   toggleTodo(task) {
-    this.taskSource$.next(this.taskSource$.getValue().map((value) => value.id ? task : value));
+    this.taskSource$.next(this.taskSource$.getValue().map((value) => value.id === task.id ? task : value));
   }
 
 }
