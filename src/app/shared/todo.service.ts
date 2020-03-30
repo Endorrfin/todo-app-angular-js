@@ -5,14 +5,12 @@ import {BehaviorSubject, Observable} from 'rxjs';
 
 
 export class TodoService {
-  todos: Todo[] = todos;
 
   getTodos(): Observable<Todo[]> {
     return this.taskSource$.asObservable();
   }
 
   private taskSource$ = new BehaviorSubject<Todo[]>(todos);
-  newTask = this.taskSource$.asObservable();
 
   createTodo(title) {
     const task = {
@@ -20,26 +18,38 @@ export class TodoService {
       id: String(Date.now()),
       completed: false
     }
+    this.taskSource$.next([task, ...this.taskSource$.getValue()]); // данные получаю из потока
+  }
 
-    this.todos = [task, ...this.todos];
-    this.taskSource$.next(this.todos);
-    }
 
   deleteTodo(todo: Todo) {
-    this.taskSource$.next(this.todos.filter(task => task.id !== todo.id));
-    // this.todos = this.todos.filter(task => todo.id !== task.id)
-
-
-    // let index = this.todos.indexOf(todo);
-    // console.log(index);
-    // console.log(this.todos);
-    // console.log(todo);
-    // if(index !== -1) {
-    //   this.todos.splice(index, 1);
-    // }
+    this.taskSource$.next(this.taskSource$.getValue().filter(task => task.id !== todo.id));
+    console.log(this.taskSource$.getValue());
   }
 
-  toggleTodo(todo: Todo) {
-    todo.completed = !todo.completed;
+
+  toggleTodo(task) {
+    this.taskSource$.next(this.taskSource$.getValue().map((value) => value.id ? task : value));
   }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 import {Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import { Todo } from '../shared/todo';
+import {TodoService} from '../shared/todo.service';
 
 @Component({
   selector: 'todo-item',
@@ -11,17 +12,19 @@ export class TodoItemComponent implements OnInit {
   @Input() task: Todo;
   @Output() delete = new EventEmitter();
 
+
+  constructor(private todoService: TodoService) { }
+
+  ngOnInit(): void {}
+
+
   toggle() {
     this.task.completed = !this.task.completed;
+    this.todoService.toggleTodo(this.task);
   }
 
   onDelete() {
     this.delete.emit(this.task);
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
 }
