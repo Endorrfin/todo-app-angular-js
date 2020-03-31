@@ -26,11 +26,9 @@ export class TodoService {
   }
 
   toggleTodo(task) {
-    this.taskSource$.next(this.taskSource$.getValue().map((value) => value.id === task.id ? task : value));
+    this.taskSource$.next(this.taskSource$.getValue().map((value) => value.id === task.id ? {...value, completed: !value.completed}: value));
   }
-
 }
-
 
 
 

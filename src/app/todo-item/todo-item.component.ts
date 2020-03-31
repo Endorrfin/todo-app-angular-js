@@ -17,9 +17,7 @@ export class TodoItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-
   toggle() {
-    this.task.completed = !this.task.completed;
     this.todoService.toggleTodo(this.task);
   }
 
