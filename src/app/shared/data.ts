@@ -1,18 +1,18 @@
 export const todos = [
   {
     id: '1',
-    title: 'Create new repositories TODO App on gitHub',
+    title: 'Create new repositories ToDo App on gitHub',
     completed: true
   },
   {
     id: '2',
     title: 'Create new branch',
-    completed: false
+    completed: true
   },
   {
     id: '3',
-    title: 'Create markup for to-do list in html',
-    completed: false
+    title: 'Create markup for ToDo app in html',
+    completed: true
   },
   {
     id: '4',
@@ -21,12 +21,18 @@ export const todos = [
   },
   {
     id: '5',
-    title: 'Create components',
+    title: 'Components breakdown',
     completed: false
   },
   {
     id: '6',
-    title: 'Create services',
+    title: 'Implementation using Services',
+    completed: false
+  },
+  {
+    id: '7',
+    title: 'Implementation using Observables & BehaviorSubject',
     completed: false
   }
 ];
+

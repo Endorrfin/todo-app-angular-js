@@ -4,8 +4,6 @@ import { Todo } from './shared/todo';
 import { TodoService } from '../app/shared/todo.service';
 import {Observable} from 'rxjs';
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,7 +27,6 @@ export class AppComponent implements OnInit{
 
   constructor(private todoService: TodoService) {
   }
-
 }
 
 
