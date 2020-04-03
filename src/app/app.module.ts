@@ -9,11 +9,13 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoService } from '../app/shared/todo.service';
 import { NewsComponent } from './news/news.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  declarations: [AppComponent, TodoFormComponent, TodoListComponent, TodoItemComponent, NewsComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, TodoFormComponent, TodoListComponent, TodoItemComponent, NewsComponent, HomeComponent],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [TodoService],
   bootstrap: [AppComponent]
 })

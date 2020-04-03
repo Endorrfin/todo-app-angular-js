@@ -1,14 +1,29 @@
 
-<header>
-  <h1>{{ title }}</h1>
-</header>
+
+<nav class="nav-bar">
+  <h1><a [routerLink]="['/']">Angular app</a></h1>
+  <ul class="menu-list">
+    <li class="list-item"><a [routerLink]="['/']">Home</a></li>
+    <li class="list-item"><a [routerLink]="['/todo-list']">Todo</a></li>
+    <li class="list-item"><a [routerLink]="['/news']">News</a></li>
+  </ul>
+</nav>
+
+
+<!--<app-home></app-home>-->
+
+<!--<header>-->
+<!--  <h1>{{ title }}</h1>-->
+<!--</header>-->
 
 <main>
-  <todo-form (add)="create($event)"></todo-form>
-  <todo-list [todos]="todos$ | async"></todo-list>
+<!--  <todo-form (add)="create($event)"></todo-form>-->
+<!--  <todo-list [todos]="todos$ | async"></todo-list>-->
 
-  <hr>
+<!--  <hr>-->
 
-  <h2>News app</h2>
-  <app-news></app-news>
+<!--  <h2>News app</h2>-->
+
+  <router-outlet></router-outlet>
+<!--  <app-news></app-news>-->
 </main>
