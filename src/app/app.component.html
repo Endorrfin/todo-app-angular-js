@@ -6,4 +6,9 @@
 <main>
   <todo-form (add)="create($event)"></todo-form>
   <todo-list [todos]="todos$ | async"></todo-list>
+
+  <hr>
+
+  <h2>News app</h2>
+  <app-news></app-news>
 </main>
