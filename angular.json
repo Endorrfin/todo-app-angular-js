@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "todo-app-angular-js": {
+    "todo-and-news-angular-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/todo-app-angular-js",
+            "outputPath": "dist/todo-and-news-angular-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-app-angular-js:build"
+            "browserTarget": "todo-and-news-angular-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-app-angular-js:build:production"
+              "browserTarget": "todo-and-news-angular-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-app-angular-js:build"
+            "browserTarget": "todo-and-news-angular-app:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "todo-app-angular-js:serve"
+            "devServerTarget": "todo-and-news-angular-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "todo-app-angular-js:serve:production"
+              "devServerTarget": "todo-and-news-angular-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "todo-app-angular-js"
+  "defaultProject": "todo-and-news-angular-app"
 }

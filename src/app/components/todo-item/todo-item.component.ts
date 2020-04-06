@@ -1,9 +1,9 @@
-import {Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy} from '@angular/core';
-import { Todo } from '../shared/todo';
-import {TodoService} from '../shared/todo.service';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Todo } from '../../shared/todo';
+import { TodoService } from "../../shared/todo.service";
 
 @Component({
-  selector: 'todo-item',
+  selector: 'app-todo-item',
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -11,7 +11,6 @@ import {TodoService} from '../shared/todo.service';
 export class TodoItemComponent implements OnInit {
   @Input() task: Todo;
   @Output() delete = new EventEmitter();
-
 
   constructor(private todoService: TodoService) { }
 

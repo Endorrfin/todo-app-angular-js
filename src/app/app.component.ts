@@ -1,8 +1,7 @@
-import {ChangeDetectionStrategy, OnInit, Component} from '@angular/core';
-
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { Todo } from './shared/todo';
-import { TodoService } from '../app/shared/todo.service';
-import {Observable} from 'rxjs';
+import { TodoService } from "./shared/todo.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -10,8 +9,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./app.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit{
-  title: string = 'ToDo List App Angular';
+export class AppComponent implements OnInit {
+  title: string = 'ToDo & News App';
   todos$: Observable<Todo[]>;
 
   create(title: string) {
@@ -28,5 +27,3 @@ export class AppComponent implements OnInit{
   constructor(private todoService: TodoService) {
   }
 }
-
-

@@ -41,5 +41,4 @@ export class NewsApiService {
   //   return this.http.get(`http://newsapi.org/v2/top-headlines?sources=${source}&country=${country}&category=${category}&apiKey=${this.api_key}`);
   // }
 
-
 }

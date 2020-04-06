@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {NewsComponent} from './news/news.component';
-import {TodoListComponent} from './todo-list/todo-list.component';
-import {HomeComponent} from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import {HomeComponent} from "./components/home/home.component";
+import {TodoListComponent} from "./components/todo-list/todo-list.component";
+import {NewsComponent} from "./components/news/news.component";
 
 
 // http://localhost:4200/ -> HomeComponent
 // http://localhost:4200/news -> NewsComponent
 // http://localhost:4200/todolist -> TodoListComponent
 
-const routers: Routes = [
+const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'todo-list', component: TodoListComponent},
   {path: 'news', component: NewsComponent}
-]
-
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routers)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
-export class AppRoutingModule {
-
-}
-
+export class AppRoutingModule { }

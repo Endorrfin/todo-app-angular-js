@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import { Todo } from '../shared/todo';
-import { TodoService } from '../shared/todo.service';
+import { Todo } from '../../shared/todo';
+import { TodoService } from "../../shared/todo.service";
 
 @Component({
   selector: 'todo-list',
@@ -15,8 +15,9 @@ export class TodoListComponent implements OnInit {
     this.todoService.deleteTodo(todo);
   }
 
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
   }
+
 }

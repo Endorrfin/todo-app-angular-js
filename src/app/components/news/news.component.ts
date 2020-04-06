@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { NewsApiService } from '../shared/news-api.service';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import { NewsApiService } from "../../shared/news-api.service";
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css']
+  styleUrls: ['./news.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class NewsComponent implements OnInit {
   newsList;
-  currentCountry = 'us'; // default country is Ukraine
-  currentCategory = 'technology'; // default category is Health
+  currentCountry = 'us'; // default country is USA
+  currentCategory = 'technology'; // default category is Technology
   currentSource = '';
   countryList = ['ua', 'us', 'pl', 'ca', 'gb', 'kz', 'ru']; // country list for country select
   // countryList = ['Ukraine', 'USA', 'Pollen', 'Canada', 'Great Britain', 'Kazakhstan', 'Russia']; // country list for country select
@@ -63,6 +65,5 @@ export class NewsComponent implements OnInit {
   //     this.newsList = news['articles'];
   //   });
   // }
-
 
 }

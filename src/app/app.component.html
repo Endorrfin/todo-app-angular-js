@@ -1,29 +1,30 @@
 
+<main>
+
+<header>
+  <h1><a [routerLink]="['/']">{{ title }}</a></h1>
+</header>
+
+  <app-home></app-home>
 
 <nav class="nav-bar">
-  <h1><a [routerLink]="['/']">Angular app</a></h1>
   <ul class="menu-list">
-    <li class="list-item"><a [routerLink]="['/']">Home</a></li>
-    <li class="list-item"><a [routerLink]="['/todo-list']">Todo</a></li>
-    <li class="list-item"><a [routerLink]="['/news']">News</a></li>
+    <li class="list-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/']">Home</a></li>
+    <li class="list-item" routerLinkActive="active"><a [routerLink]="'/todo-list'">Todo</a></li>
+    <li class="list-item" routerLinkActive="active"><a [routerLink]="['/news']">News</a></li>
   </ul>
 </nav>
 
+    <hr>
 
-<!--<app-home></app-home>-->
+<h2>ToDo app</h2>
 
-<!--<header>-->
-<!--  <h1>{{ title }}</h1>-->
-<!--</header>-->
+  <todo-form (add)="create($event)"></todo-form>
+  <todo-list [todos]="todos$ | async"></todo-list>
 
-<main>
-<!--  <todo-form (add)="create($event)"></todo-form>-->
-<!--  <todo-list [todos]="todos$ | async"></todo-list>-->
 
-<!--  <hr>-->
 
-<!--  <h2>News app</h2>-->
-
+  <h2>News app</h2>
   <router-outlet></router-outlet>
-<!--  <app-news></app-news>-->
+<!--    <app-news></app-news>-->
 </main>

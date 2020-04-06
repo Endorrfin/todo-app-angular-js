@@ -1,7 +1,7 @@
-import {Component, Output, EventEmitter, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'todo-form',
+  selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
   styleUrls: ['./todo-form.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
